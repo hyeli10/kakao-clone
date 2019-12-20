@@ -1,0 +1,12 @@
+.box {
+  background-color: pink;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  display: inline-block;
+  /* inline-block을 하지않으면 디폴트 값에 따라 block으로 처리된다 */
+  /* inline : 높이와 폭이 없는 텍스트, 컨텐츠의 길이만 존재한다. */
+  /* block : 높이와 폭이 존재하지만 그 옆에 어떤 element도 놓을 수 없다. */
+  /* inline-block : 높이오 폭이 존재하고 옆에 element를 놓을 수 있다. */
+  
+}
