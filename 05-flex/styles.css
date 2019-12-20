@@ -1,0 +1,56 @@
+html,
+body {
+  height: 100%;
+}
+.father {
+  /* flex는 부모 클래스에만 적용 */
+  /* 자식클래스에게 말고 부모클래스에게만 명령하면 된다. */
+  /* display를 inline-block하지 않아도 flex만으로 설정된다. */
+  display: flex;
+  height: 100%;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-direction은 디폴트값이 row, row일 경우 justify-content -> 수평, align-items ->수직 */
+  /* column일 경우 : justify-content->수직, justify-items-> 수평 */
+
+  /* flex-wrap의 디폴트 값은 nowrap이다.*/
+  /*nowrap : 화면 크기에 따라 박스의 폭도 조정된다.  */
+  /*wrap: 화면 크기를 줄여도 박스의 폭은 유지된다. */
+
+  /* space-between : 같은간격으로 조정 */
+  /* space-around : 주변도 같은 간격으로 조정 */
+}
+.box-f {
+  background-color: gray;
+  width: 200px;
+  height: 200px;
+  /* margin-top: 20px; */
+  border: 1px solid yellow;
+}
+
+.mother {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  /* reverse하면 방향을 바꿀 수 있다. */
+
+  flex-wrap: nowrap;
+}
+.box-m {
+  background-color: pink;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
