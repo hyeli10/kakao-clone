@@ -1,4 +1,4 @@
-/* css를 사용해 변경할 경우 연결된 모든 html문서에 적용이 된다. */
+/* 2)external 방법:css를 사용해 변경할 경우 연결된 모든 html문서에 적용이 된다. */
 h1 {
   color: green;
   font-size: 10px;
