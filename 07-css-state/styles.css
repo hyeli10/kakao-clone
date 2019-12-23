@@ -1,0 +1,24 @@
+.container {
+  margin: 20px;
+}
+.box-1 {
+  background-color: brown;
+  color: white;
+  font-size: 40px;
+}
+
+/* hover state :위에 뭔가 올라갔을 경우 상태 변화*/
+.box-1:hover {
+  background-color: pink;
+}
+
+/* active state : 클릭했을 경우 상태 변화 */
+.box-1:active {
+  background-color: green;
+}
+
+/* focus state : 선택되었을 경우 상태 변화 */
+/* hover보다 더 중요해서 같이 사용했을 경우 hover명령은 무시된다. */
+.box-2:focus {
+  background-color: skyblue;
+}
