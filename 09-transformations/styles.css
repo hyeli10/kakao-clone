@@ -1,0 +1,31 @@
+/* transformations : html문서의 element들을 변경, 모습이 변하는 효과를 뜻한다. */
+.box-1 {
+  width: 200px;
+  height: 200px;
+  background-color: skyblue;
+  margin: 50px;
+  /* 20도 회전 */
+  /* 적용시켜볼수있는 transform 링크 : https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+  transform: rotate(20deg);
+  transition: 2s ease-in-out;
+}
+
+.box-1:hover {
+  transform: rotate(3turn);
+  background-color: palevioletred;
+}
+
+.box-2 {
+  width: 300px;
+  height: 300px;
+  background-color: thistle;
+  transition: 1s ease-in-out;
+}
+
+.box-2:hover {
+  /* width: 150px;
+  height: 150px; */
+  background-color: rgb(247, 215, 39);
+  /* scale 적용시 크기 줄이는 변화도 함께 적용가능 */
+  transform: skewX(30deg) scale(0.5, 0.5);
+}
