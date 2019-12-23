@@ -1,0 +1,24 @@
+/* transition : 어떤 state가 바뀔때 적용된다.(state: hover, active, focus, visited) */
+/* 작성한 property 혹은 전체 변경 효과를 준다. */
+.box-1 {
+  background-color: greenyellow;
+  font-size: 40px;
+  /* 트랜지션을 적용하려면 무엇을 변경할지 적어줘야된다. */
+  /* 배경색을 5초안에 변경 , ease-in-out: 스르륵 변하는 애니메이션*/
+  transition: background-color 0.5s ease-in-out;
+}
+.box-1:hover {
+  background-color: pink;
+}
+
+.box-2 {
+  font-size: 40px;
+  background-color: bisque;
+  color: red;
+  /* all : 전체변경 효과 */
+  transition: all 0.5s ease-in-out;
+}
+.box-2:hover {
+  background-color: skyblue;
+  color: blue;
+}
