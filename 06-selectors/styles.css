@@ -1,0 +1,68 @@
+/* class 말고 pseudo-selector(가상셀렉터)를 통해서 선택을 할 수있다. */
+/* 클래스로 설정해주는 경우 */
+.class {
+  background-color: red;
+}
+
+/* 가상셀릭터로 설정해주는 경우 */
+/* 가상셀렉터 : 셀렉터인데 element가 아닌 것 , class,id를 쓰지 않고 선택하는 방법.*/
+input[type="button"] {
+  background-color: pink;
+}
+
+input[type="password"] {
+  background-color: gray;
+}
+
+/* 가짜셀렉터 */
+input + .box-1 {
+  border: 1px solid blue;
+}
+
+.box-1 {
+  background-color: green;
+  display: block;
+  height: 100px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+/* 모든 box중에 마지막박스만 선택 */
+.box-1:last-child {
+  background-color: yellow;
+}
+
+/* 가운데 박스를 선택하고 싶을 경우 0번째 child라는 의미로 nth-child를 쓰고 숫자를 지정해주면 된다 */
+.box-1:nth-child(2) {
+  background-color: pink;
+}
+
+.box-2 {
+  background-color: green;
+  display: block;
+  height: 50px;
+  width: 500px;
+  border: 1px solid yellow;
+}
+
+/* 수식을 만들 수도있다, ex)5번째부터 2의간격 */
+.box-2:nth-child(2n + 5) {
+  background-color: gainsboro;
+}
+
+.box-3 {
+  background-color: green;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
+
+/* 컨테이너의 직계이기 때문에 box-3은 green이 아닌 yellow로 바뀐다. */
+/* box-3안의 child는 .container의 직계가 아니기 때문에 변하지 않는다.(child는 box-3의 직계.) */
+.container > .box-3 {
+  background-color: yellow;
+}
+.chlid {
+  background-color: purple;
+  width: 20px;
+}
