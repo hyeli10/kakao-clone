@@ -1,0 +1,55 @@
+/* 이전에 했던 hover할 필요 없이 계속 발생하길 원한다면 애니메이션을 적용하면 된다.*/
+/* 첫번째 방법 */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  margin-bottom: 20px;
+  /* 이 동작을 계속 반복하고 싶다면 애니메이션에서 infinite(무한)을 적용 */
+  /* 기존 -> animation: 1.5s scaleAndRotateSquare ease-in-out; */
+  /* 변경 */
+  animation: 1.5s scaleAndRotateSquare infinite ease-in-out;
+}
+
+/* @keyframes: 사용자가 애니메이션을 생성했다는 것을 알려준다. */
+/* 작성법 -> @keyframes 이름 form{} to{}*/
+@keyframes scaleAndRotateSquare {
+  from {
+    /* 1. 아무것도 없는 상태에서  */
+    transform: none;
+  }
+  to {
+    /* 2. 어떤 변화된 모습까지 */
+    transform: rotate(1turn) scale(0.5, 0.5);
+  }
+}
+
+/* 두번째 방법 */
+.box-2 {
+  width: 100px;
+  height: 100px;
+  background-color: darkgray;
+  animation: 5s scaleAndRotateSquare infinite ease-in-out;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* form, to대신에 ex) 0%(none)-50%(회전)-100%(none)을 쓸 수 있다. */
+@keyframes scaleAndRotateSquare {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(1turn) scale(0.5, 0.5);
+    color: pink;
+  }
+  100% {
+    transform: none;
+    color: skyblue;
+  }
+}
+/* 커져서 회전(0-50%)
+다시 원래 모습으로 돌아감(50-100%)
+다시 변화(0-50%)
+반복.. */
