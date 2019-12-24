@@ -1,3 +1,3 @@
-# kakao-clone
+# html-css
 
-Kakao Desktop App clone
+html, css
